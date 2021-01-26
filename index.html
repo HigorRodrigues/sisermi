@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>SISERMI</title>        
+        <link rel="stylesheet" href="css/bootstrap-grid.min.css">        
+        <link rel="stylesheet" href="css/estilos.css">
+    </head>
+    <body>
+        
+        <header class="layout-cabecalho layout-cabecalho--home">
+            <div class="container">
+                <nav class="navegacao">
+                    <img src="imagens/logo.png" width="200px" height="35px" alt="SISERMI">
+
+                    <div class="navegacao__menu">
+                        <button class="botao-chaveador js-chaveador"></button>
+
+                        <ol class="menu js-menu">
+                            <li class="menu__item"><a href="#">INSTITUCIONAL</a></li>
+                            <li class="menu__item"><a href="#">FILIAÇÃO</a></li>
+                            <li class="menu__item"><a href="#">VANTAGENS</a></li>                            
+                            <li class="menu__item"><a href="#">FALE CONOSCO</a></li>                            
+                        </ol>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <section class="layout-chamada">
+            <div class="container">
+                <div class="chamada">
+                    <h1 class="chamada__titulo">Unidos Somos Mais Fortes</h1>
+                    <p class="chamada__subtitulo">Desde 1998 lutando pelo seu direito.</p>
+                    
+                    <div class="chamada__acao">
+                        <a href="#" class="botao botao--principal">Conheça a nossa história</a>
+                    </div>
+                </div>                
+            </div>
+        </section>
+
+        <div class="layout-depoimentos">
+            <div class="container">
+                
+                <div class="slideshow-container">                    
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 2</div>    
+                        
+                        <div class="depoimento">
+                            <blockquote>O sindicato não é uma força agressiva, que está sempre disposto a guerrear, 
+                                antes de tudo somos defensores e promotores do diálogo, do bom senso e da genuína democracia.</blockquote>
+                        </div>
+                        <div class="depoimento__autor">
+                            <img src="imagens/foto_marcio_luis.jpeg" width="180px" height="180px" alt="Presidente do sindicato">
+                            <p>Márcio Luis</p>
+                        </div>
+                    </div>                    
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 2</div>    
+                        
+                        <div class="depoimento">
+                            <blockquote>Estarei sempre aberto ao diálogo com todas as categorias de servidores, 
+                                visando oferecer as melhorias necessárias e possíveis. Pode confiar!</blockquote>
+                        </div>
+                        <div class="depoimento__autor">
+                            <img src="imagens/foto_prefeito.jpg" width="180px" height="180px" alt="Prefeito em exercício Léoo Pelanca">
+                            <p>Prefeito Léo Pelanca</p>
+                        </div>
+                    </div>
+
+                    <div style="text-align:center; margin: 0;">
+                        <span class="dot"></span>                 
+                        <span class="dot"></span>                         
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="planos" class="layout-planos">
+            <div class="container">
+                <div class="row">
+        
+                    <div class="col-xs-1 col-sm-2 col-md-2"></div>
+                    <div class="col-xs-10 col-sm-8 col-md-8">
+                        
+                        <article class="plano plano--mais--importante">                            
+                            <h2 class="plano__cabecalho">TAXA SINDICAL</h2>                            
+                            <div class="plano__preco">R$ 6,50</div>
+                            
+                            <ul class="plano__caracteristicas">
+                                <li>Aqui entrará uma vantagem de ser sindicalizado</li>
+                                <li>Aqui entrará uma vantagem de ser sindicalizado</li>
+                                <li>Aqui entrará uma vantagem de ser sindicalizado</li>
+                                <li>Aqui entrará uma vantagem de ser sindicalizado</li>
+                                <li>Aqui entrará uma vantagem de ser sindicalizado</li>                        
+                            </ul>
+
+                            <footer class="plano__rodape">
+                                <a href="#" class="botao botao--principal">Faça Parte</a>
+                            </footer>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="layout-rodape">
+            <div class="container">
+                <p>
+                    &copy; SISERMI. Todos os direitos reservados.
+                </p>
+            </div>
+        </footer>
+
+        <script src="javascript/app.js"></script>
+
+        <script>
+            var slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 8000); // Change image every 2 seconds
+            }
+            </script>
+    </body>
+
+</html>

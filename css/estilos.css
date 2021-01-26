@@ -1,0 +1,366 @@
+/*---------------------*/
+/*  regras básicas     */
+/*---------------------*/
+html{
+    font-size: 62.5%;
+}
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4em;
+}
+
+/*---------------------*/
+/*     layout          */
+/*---------------------*/
+
+.layout-cabecalho{    
+    background-color: #fff;
+    height: 60px;
+    
+}
+
+.layout-cabecalho--home{    
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    line-height: 60px;
+    z-index: 1;
+}
+
+.layout-chamada{
+    padding: 80px 0;
+    margin-top: 60px;
+    background-image: linear-gradient(to bottom, #fff, #B0C4DE);
+}
+
+.layout-depoimentos{
+    padding: 80px 0;
+    background-color: #e7e7e7;
+}
+
+.layout-planos{
+    padding: 50px 0;
+}
+
+.layout-rodape{
+    padding: 40px 0;
+    background-color: #122571;
+    color: #fff;
+    text-align: center;
+}
+
+.mySlides {display: none;}
+
+.slideshow-container {   
+    position: relative;
+    margin: auto;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;    
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+.numbertext {
+    color: #122571;
+    font-size: 12px;
+    padding: 8px 12px;    
+    position: absolute;
+    top: 0;
+    right: 0;        
+}
+
+/*---------------------*/
+/*     NAVEGAÇÃO       */
+/*---------------------*/
+.navegacao__menu{
+    float: right;
+}
+
+/*---------------------*/
+/*   BOTAO-CHAVEADOR   */
+/*---------------------*/
+
+.botao-chaveador{
+    width: 24px;
+    height: 24px;
+    background: none;
+    border: 0;
+    background-image: url("../imagens/menu.png");
+    outline: none;
+}
+
+
+@media( min-width: 992px){
+    .botao-chaveador{
+        display: none;
+    }
+}
+
+/*---------------------*/
+/*   BOTAO-CHAVEADOR   */
+/*---------------------*/
+
+.menu{
+    margin: 0;
+    list-style: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+
+.menu__item a{
+    display: block;
+    padding-right: 20px;
+    padding-left: 20px;             
+}
+
+.menu__item a:hover , .menu__item a:focus{
+    background-color: #122571;
+    color: #fff;
+    height: 60px;
+    transition: 2s;       
+    border-bottom: 10px solid #cccccc; 
+    text-decoration: none;        
+}
+
+@media( max-width : 991px){
+    .menu{
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 200px;
+        padding: 0px;
+        margin-top: 60px;
+        display: none;
+        background-color: #fbfbfb;
+        border-right: 1px solid #eee;           
+    }
+
+    .menu--exibindo{
+        display: block;    
+    }
+}
+
+@media( min-width : 992px){
+    .menu__item{
+        display: inline-block;        
+    }
+    
+}
+
+/*---------------------*/
+/*     PLANO           */
+/*---------------------*/
+.plano{
+    position: relative;
+    border: 1px solid #94a4a5;
+    padding: 0.7142857142857143em;
+    margin: auto;
+    font-size: 1.4rem;
+}
+
+.plano--mais--importante::after{
+    position: absolute;
+    top: -10px;
+    left: -10px;
+
+    font-size: 1em;
+    line-height: 2.5;
+    padding: 0 10px;
+    background-color: #c20c03;
+    color: #fff;
+    content: "IMPORTANTE";
+}
+
+.plano__cabecalho{
+    background-color: #122571;
+    color: white;
+    text-align: center;
+    line-height: 2.5;
+    margin: -0.4em;
+    margin-bottom: 0px;
+    font-weight: normal;
+    font-size: 2em;   
+}
+
+.plano__preco{
+    text-align: center;
+    font-size: 3em;
+    margin: 0.5em 0;    
+}
+
+.plano__caracteristicas{
+    list-style: none;
+    padding: 0;
+    font-size: 2em;
+    margin: 1,4285em;
+}
+
+.plano__caracteristicas > li{
+    text-align: center;
+    font-size: 1em;
+}
+
+.plano__rodape{
+    text-align: center;
+}
+
+/*---------------------*/
+/*     CHAMADAS        */
+/*---------------------*/
+.chamada{
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.chamada__titulo{
+    margin: 0;
+    color: #122571;
+    font-size: 3.375em;
+    line-height: 0.9;
+    text-shadow: 2px 2px #303030;
+}
+
+.chamada__subtitulo{
+    margin: 50px 0;
+    line-height: 1.8;
+    color: #122571;
+    font-size: 1.2em;
+}
+
+.chamada__acao{
+    font-size: 1em;
+}
+
+@media( min-width : 992px){
+    .chamada{
+        padding-left: 20%;
+        padding-right: 20%;
+        font-size: 1.8rem;
+    }
+}
+
+/*---------------------*/
+/*    DEPOIMENTO       */
+/*---------------------*/
+.depoimento{
+    font-size: 2.2rem;
+}
+
+@media( min-width :992px){
+    .depoimento{
+        padding-left: 15%;
+        padding-right: 15%;
+        font-size: 2.8rem;
+    }
+}
+.depoimento >blockquote{
+    position: relative;
+    margin: 0;
+    padding: 0 60px;
+    text-align: center;
+    font-size: 1em;
+}
+
+.depoimento >blockquote::before{
+    position: absolute;
+    left: 0;
+    top: -0.35em;
+
+    color: #ccc;
+    font-size: 8em;
+
+    content: '\201C';
+}
+
+.depoimento__autor{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.depoimento__autor > img{
+    border-radius: 50%;
+}
+
+.depoimento__autor > p{
+    margin-top: 10px;
+}
+/*---------------------*/
+/* BOTÃO               */
+/*---------------------*/
+.botao{
+    display: inline-block;
+    
+    background-color: #BBB;
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 0.75em 1.2em;    
+}
+
+.botao:hover, .botao:focus{
+    background-color: #AAA;    
+    color: white;
+    text-decoration: none;
+}
+
+.botao--assinar{
+    background-color: #127d00;
+}
+
+.botao--assinar:hover, .botao--assinar:focus{
+    background-color: #0ee400;
+}
+
+.botao--principal{
+    background-color: #122571;    
+}
+
+.botao--principal:hover, .botao--principal:focus{
+    transition: 2s;
+}
+/*---------------------*/
+/*     plano           */
+/*---------------------*/
+ul.menu{
+    list-style: none;
+}
+
+ul.menu > li{
+    display: inline-block;
+    padding: 5px;
+    border: 2px solid red;
+}
