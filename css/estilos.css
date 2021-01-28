@@ -152,6 +152,20 @@ body{
     text-decoration: none;        
 }
 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;    
+    z-index: 1;
+}
+  
+.dropdown-content a {            
+    display: block;
+    text-align: left;
+    background-color: #122571;
+    color: #fff;
+}
+
 @media( max-width : 991px){
     .menu{
         position: fixed;
@@ -169,12 +183,24 @@ body{
     .menu--exibindo{
         display: block;    
     }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        min-width: 160px;    
+        z-index: 1;
+    }
+      
+    .dropdown-content a {            
+        display: block;
+        text-align: left;
+    }
 }
 
 @media( min-width : 992px){
     .menu__item{
         display: inline-block;        
-    }
+    }    
     
 }
 
@@ -363,4 +389,17 @@ ul.menu > li{
     display: inline-block;
     padding: 5px;
     border: 2px solid red;
+}
+
+.dropbtn {
+    display: inline-block;    
+    text-align: center;        
+}
+  
+li.dropdown {
+    display: inline-block;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
 }
